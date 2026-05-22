@@ -1,8 +1,4 @@
-@config "../../tailwind.config.ts";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @theme {
   --color-forest: #2B4A3E;
@@ -10,6 +6,12 @@
   --color-gold: #8B7D3C;
   --color-charcoal: #1A1A1A;
   --color-sage: #D4DDD7;
+
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-dancing: "Dancing Script", cursive;
+  --font-inter: "Inter", sans-serif;
+
+  --tracking-logo: 0.3em;
 }
 
 /* Hide scrollbar for menu tabs */

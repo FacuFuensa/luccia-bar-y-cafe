@@ -21,7 +21,7 @@ export function HeroSection() {
         </p>
         <Link
           href="/carta"
-          className="mt-4 border-2 border-cream text-cream px-8 py-3 font-inter text-sm font-medium tracking-widest uppercase hover:bg-cream hover:text-forest transition-colors duration-200"
+          className="mt-4 bg-forest text-white px-8 py-3 font-inter text-sm font-medium tracking-widest uppercase border border-white/20 hover:bg-forest/80 transition-colors duration-200"
         >
           Ver nuestra carta
         </Link>

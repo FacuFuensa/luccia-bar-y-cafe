@@ -12,9 +12,9 @@ export function MenuSection({ section, sinTaccActive }: MenuSectionProps) {
       <div className="bg-forest px-5 py-3 rounded-t-md">
         <h2 className="font-dancing text-2xl text-white">{section.title}</h2>
       </div>
-      <div className="bg-cream px-5 pb-3 rounded-b-md border border-t-0 border-sage/40">
+      <div className="bg-cream px-4 pt-3 pb-4 rounded-b-md border border-t-0 border-sage/40 space-y-2">
         {section.note && (
-          <p className="font-inter text-xs text-gold italic pt-3 pb-1">{section.note}</p>
+          <p className="font-inter text-xs text-gold italic pb-1">{section.note}</p>
         )}
         {section.items.map((item) => (
           <MenuItemCard key={item.name} item={item} sinTaccActive={sinTaccActive} />

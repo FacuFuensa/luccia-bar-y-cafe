@@ -5,8 +5,8 @@ const GRID_IMAGES = [
   { src: 'https://images.unsplash.com/photo-1484723091739-30990f53f0d6?w=400&q=80', alt: 'Desayuno' },
   { src: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&q=80', alt: 'Ambiente' },
   { src: 'https://images.unsplash.com/photo-1551504734-5da14e39e00c?w=400&q=80', alt: 'Postre' },
-  { src: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=400&q=80', alt: 'Croissant' },
-  { src: 'https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=400&q=80', alt: 'Waffle' },
+  { src: 'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=400&q=80', alt: 'Croissant' },
+  { src: 'https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?w=400&q=80', alt: 'Desayuno especial' },
 ]
 
 export function InstagramGrid() {

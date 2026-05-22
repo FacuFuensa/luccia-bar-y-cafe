@@ -2,7 +2,7 @@ export const contact = {
   whatsapp: {
     sirga: {
       display: 'WhatsApp Sirga',
-      url: 'https://wa.me/5493810000000', // TODO: replace with actual number
+      url: 'https://wa.me/5493815291258',
     },
     aconquija: {
       display: 'WhatsApp Aconquija',
