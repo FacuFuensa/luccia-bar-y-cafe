@@ -1,3 +1,5 @@
+@config "../../tailwind.config.ts";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,12 +10,6 @@
   --color-gold: #8B7D3C;
   --color-charcoal: #1A1A1A;
   --color-sage: #D4DDD7;
-
-  --font-family-cormorant: var(--font-cormorant), serif;
-  --font-family-dancing: var(--font-dancing), cursive;
-  --font-family-inter: var(--font-inter), sans-serif;
-
-  --letter-spacing-logo: 0.3em;
 }
 
 /* Hide scrollbar for menu tabs */
