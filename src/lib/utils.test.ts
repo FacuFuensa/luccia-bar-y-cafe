@@ -1,4 +1,19 @@
-import { formatPrice } from './utils'
+import { cn, formatPrice } from './utils'
+
+describe('cn', () => {
+  it('joins multiple strings', () => {
+    expect(cn('a', 'b', 'c')).toBe('a b c')
+  })
+  it('filters out falsy values', () => {
+    expect(cn('a', undefined, null, false, 'b')).toBe('a b')
+  })
+  it('returns empty string for all falsy', () => {
+    expect(cn(undefined, null, false)).toBe('')
+  })
+  it('handles empty string argument', () => {
+    expect(cn('a', '', 'b')).toBe('a b')
+  })
+})
 
 describe('formatPrice', () => {
   it('formats 14000 as $14.000', () => {
