@@ -1,3 +1,5 @@
+import { useId } from 'react'
+
 interface LucciaLogoProps {
   size?: number
   variant?: 'dark' | 'light'
@@ -5,7 +7,10 @@ interface LucciaLogoProps {
 }
 
 export function LucciaLogo({ size = 80, variant = 'dark', className }: LucciaLogoProps) {
+  const uid = useId().replace(/:/g, '')
   const color = variant === 'dark' ? '#2B4A3E' : '#F5F0E8'
+  const topArcId = `${uid}-top`
+  const bottomArcId = `${uid}-bot`
 
   return (
     <svg
@@ -14,19 +19,18 @@ export function LucciaLogo({ size = 80, variant = 'dark', className }: LucciaLog
       viewBox="0 0 200 200"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      role="img"
       aria-label="Luccia Bar & Café"
     >
+      <defs>
+        <path id={topArcId} d="M 20,100 A 80,80 0 0,1 180,100" />
+        <path id={bottomArcId} d="M 32,114 A 68,68 0 0,0 168,114" />
+      </defs>
+
       {/* Outer ring */}
       <circle cx="100" cy="100" r="94" fill="none" stroke={color} strokeWidth="2.5" />
       {/* Inner decorative ring */}
       <circle cx="100" cy="100" r="86" fill="none" stroke={color} strokeWidth="0.5" opacity="0.5" />
-
-      <defs>
-        {/* Top arc: sweeps through the upper half, left to right */}
-        <path id="lucciaTopArc" d="M 20,100 A 80,80 0 0,1 180,100" />
-        {/* Bottom arc: sweeps through the lower half, left to right */}
-        <path id="lucciaBottomArc" d="M 32,114 A 68,68 0 0,0 168,114" />
-      </defs>
 
       {/* "LUCCIA" on top arc */}
       <text
@@ -36,7 +40,7 @@ export function LucciaLogo({ size = 80, variant = 'dark', className }: LucciaLog
         fill={color}
         fontWeight="600"
       >
-        <textPath href="#lucciaTopArc" startOffset="50%" textAnchor="middle">
+        <textPath href={`#${topArcId}`} startOffset="50%" textAnchor="middle">
           LUCCIA
         </textPath>
       </text>
@@ -48,12 +52,12 @@ export function LucciaLogo({ size = 80, variant = 'dark', className }: LucciaLog
         letterSpacing="3"
         fill={color}
       >
-        <textPath href="#lucciaBottomArc" startOffset="50%" textAnchor="middle">
+        <textPath href={`#${bottomArcId}`} startOffset="50%" textAnchor="middle">
           bar &amp; café
         </textPath>
       </text>
 
-      {/* Coffee cup — centered at (100, 95) */}
+      {/* Coffee cup — centered at (100, 96) */}
       <g transform="translate(100, 96)" fill={color}>
         {/* Steam */}
         <path d="M-7,-30 Q-4,-38 -7,-45" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
