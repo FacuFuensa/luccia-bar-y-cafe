@@ -12,7 +12,7 @@ export default function UbicacionesPage() {
 
       <div className="max-w-4xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         <LocationCard
-          name="Luccia Center — La Sirga"
+          name="Sucursal La Sirga"
           address="Av. Solano Vera, Cno. de Sirga, Yerba Buena, Tucumán"
           mapSrc="https://maps.google.com/maps?cid=73850214913254079&output=embed"
           mapsUrl="https://maps.app.goo.gl/ZoPiEQZpc2beL1J3A"
