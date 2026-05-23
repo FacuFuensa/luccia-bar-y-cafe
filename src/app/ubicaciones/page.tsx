@@ -14,7 +14,6 @@ export default function UbicacionesPage() {
         <LocationCard
           name="Luccia Center — La Sirga"
           address="Av. Solano Vera, Cno. de Sirga, Yerba Buena, Tucumán"
-          mapSrc="https://maps.google.com/maps?q=Av.+Solano+Vera+Cno+de+Sirga+Yerba+Buena+Tucuman&output=embed"
           mapsUrl="https://maps.app.goo.gl/ZoPiEQZpc2beL1J3A"
           whatsappUrl={contact.whatsapp.sirga.url}
           whatsappLabel={contact.whatsapp.sirga.display}
@@ -22,7 +21,6 @@ export default function UbicacionesPage() {
         <LocationCard
           name="Sucursal Aconquija"
           address="Av. Aconquija 2496, T4107 Yerba Buena, Tucumán"
-          mapSrc="https://maps.google.com/maps?q=Av.+Aconquija+2496+Yerba+Buena+Tucuman&output=embed"
           mapsUrl="https://maps.app.goo.gl/YHH1yiSdQuoGt32ZA"
           whatsappUrl={contact.whatsapp.aconquija.url}
           whatsappLabel={contact.whatsapp.aconquija.display}

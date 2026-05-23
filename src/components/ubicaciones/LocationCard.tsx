@@ -1,15 +1,12 @@
-import { MapEmbed } from './MapEmbed'
-
 interface LocationCardProps {
   name: string
   address: string
-  mapSrc: string
   mapsUrl: string
   whatsappUrl: string
   whatsappLabel: string
 }
 
-export function LocationCard({ name, address, mapSrc, mapsUrl, whatsappUrl, whatsappLabel }: LocationCardProps) {
+export function LocationCard({ name, address, mapsUrl, whatsappUrl, whatsappLabel }: LocationCardProps) {
   return (
     <div className="bg-cream border border-sage rounded-lg p-6 flex flex-col gap-5">
       <div>
@@ -29,8 +26,6 @@ export function LocationCard({ name, address, mapSrc, mapsUrl, whatsappUrl, what
           Lunes a Domingos · 07:00 – 00:00
         </p>
       </div>
-
-      <MapEmbed src={mapSrc} title={`Mapa ${name}`} />
 
       <a
         href={mapsUrl}

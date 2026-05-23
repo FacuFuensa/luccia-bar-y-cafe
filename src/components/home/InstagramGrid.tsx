@@ -2,9 +2,9 @@ const GRID_IMAGES = [
   { src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80', alt: 'Café' },
   { src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80', alt: 'Latte' },
   { src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=80', alt: 'Ambiente' },
-  { src: 'https://images.unsplash.com/photo-1551504734-5da14e39e00c?w=400&q=80', alt: 'Postre' },
-  { src: 'https://images.unsplash.com/photo-1484723091739-30990f53f0d6?w=400&q=80', alt: 'Desayuno' },
-  { src: 'https://images.unsplash.com/photo-1504627298434-2f51e16ba7e6?w=400&q=80', alt: 'Mesa' },
+  { src: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80', alt: 'Postre' },
+  { src: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80', alt: 'Brunch' },
+  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80', alt: 'Mesa' },
 ]
 
 export function InstagramGrid() {
