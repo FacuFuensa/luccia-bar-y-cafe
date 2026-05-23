@@ -4,11 +4,12 @@ interface LocationCardProps {
   name: string
   address: string
   mapSrc: string
+  mapsUrl: string
   whatsappUrl: string
   whatsappLabel: string
 }
 
-export function LocationCard({ name, address, mapSrc, whatsappUrl, whatsappLabel }: LocationCardProps) {
+export function LocationCard({ name, address, mapSrc, mapsUrl, whatsappUrl, whatsappLabel }: LocationCardProps) {
   return (
     <div className="bg-cream border border-sage rounded-lg p-6 flex flex-col gap-5">
       <div>
@@ -30,6 +31,18 @@ export function LocationCard({ name, address, mapSrc, whatsappUrl, whatsappLabel
       </div>
 
       <MapEmbed src={mapSrc} title={`Mapa ${name}`} />
+
+      <a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 border border-forest text-forest px-4 py-2 rounded-md font-inter text-sm font-medium hover:bg-forest hover:text-white transition-colors"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
+        </svg>
+        Abrir en Google Maps
+      </a>
 
       <a
         href={whatsappUrl}

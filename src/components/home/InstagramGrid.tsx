@@ -1,12 +1,10 @@
-import Image from 'next/image'
-
 const GRID_IMAGES = [
   { src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80', alt: 'Café' },
-  { src: 'https://images.unsplash.com/photo-1484723091739-30990f53f0d6?w=400&q=80', alt: 'Desayuno' },
-  { src: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&q=80', alt: 'Ambiente' },
+  { src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80', alt: 'Latte' },
+  { src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=80', alt: 'Ambiente' },
   { src: 'https://images.unsplash.com/photo-1551504734-5da14e39e00c?w=400&q=80', alt: 'Postre' },
-  { src: 'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=400&q=80', alt: 'Croissant' },
-  { src: 'https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?w=400&q=80', alt: 'Desayuno especial' },
+  { src: 'https://images.unsplash.com/photo-1484723091739-30990f53f0d6?w=400&q=80', alt: 'Desayuno' },
+  { src: 'https://images.unsplash.com/photo-1504627298434-2f51e16ba7e6?w=400&q=80', alt: 'Mesa' },
 ]
 
 export function InstagramGrid() {
@@ -31,12 +29,13 @@ export function InstagramGrid() {
           className="grid grid-cols-3 gap-1 md:gap-2"
         >
           {GRID_IMAGES.map((img) => (
-            <div key={img.src} className="relative aspect-square overflow-hidden rounded-sm">
-              <Image
+            <div key={img.src} className="aspect-square overflow-hidden rounded-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={img.src}
                 alt={img.alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           ))}

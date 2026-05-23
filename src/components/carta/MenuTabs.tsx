@@ -1,11 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import type { MenuSection } from '@/data/menu'
 
 export function MenuTabs({ sections }: { sections: MenuSection[] }) {
   const [activeId, setActiveId] = useState(sections[0]?.id ?? '')
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({})
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
@@ -30,6 +31,13 @@ export function MenuTabs({ sections }: { sections: MenuSection[] }) {
     return () => observers.forEach((o) => o.disconnect())
   }, [sections])
 
+  useEffect(() => {
+    const tab = tabRefs.current[activeId]
+    if (tab) {
+      tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    }
+  }, [activeId])
+
   return (
     <div className="sticky top-16 z-30 bg-white border-b border-sage shadow-sm">
       <div className="overflow-x-auto scrollbar-none">
@@ -39,6 +47,7 @@ export function MenuTabs({ sections }: { sections: MenuSection[] }) {
             return (
               <button
                 key={section.id}
+                ref={(el) => { tabRefs.current[section.id] = el }}
                 onClick={() => scrollTo(section.id)}
                 className={`relative px-3 py-3 font-inter text-xs whitespace-nowrap transition-colors ${
                   active ? 'text-forest font-semibold' : 'text-charcoal/50 hover:text-forest'
