@@ -1,14 +1,26 @@
 interface LocationCardProps {
   name: string
   address: string
+  mapSrc: string
   mapsUrl: string
   whatsappUrl: string
   whatsappLabel: string
 }
 
-export function LocationCard({ name, address, mapsUrl, whatsappUrl, whatsappLabel }: LocationCardProps) {
+export function LocationCard({ name, address, mapSrc, mapsUrl, whatsappUrl, whatsappLabel }: LocationCardProps) {
   return (
-    <div className="bg-cream border border-sage rounded-lg p-6 flex flex-col gap-5">
+    <div className="bg-cream border border-sage rounded-lg overflow-hidden flex flex-col gap-0">
+      <div className="h-48 w-full">
+        <iframe
+          src={mapSrc}
+          className="w-full h-full border-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title={`Mapa de ${name}`}
+        />
+      </div>
+      <div className="p-6 flex flex-col gap-5">
       <div>
         <h2 className="font-cormorant text-2xl font-semibold text-forest mb-1">{name}</h2>
         <p className="font-inter text-sm text-charcoal/65 flex items-start gap-2">
@@ -50,6 +62,7 @@ export function LocationCard({ name, address, mapsUrl, whatsappUrl, whatsappLabe
         </svg>
         {whatsappLabel}
       </a>
+      </div>
     </div>
   )
 }
