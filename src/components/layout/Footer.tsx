@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { LucciaLogo } from '@/components/ui/LucciaLogo'
 import { contact } from '@/data/contact'
 
 export function Footer() {
@@ -7,8 +6,7 @@ export function Footer() {
     <footer className="bg-forest text-white py-14 px-4">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-2">
-          <LucciaLogo size={64} variant="light" />
-          <p className="font-cormorant text-2xl tracking-logo mt-1">LUCCIA</p>
+          <p className="font-cormorant text-2xl tracking-logo">LUCCIA</p>
           <p className="font-dancing text-xl text-sage">creando momentos</p>
         </div>
 

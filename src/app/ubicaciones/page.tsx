@@ -28,6 +28,7 @@ export default function UbicacionesPage() {
           whatsappLabel={contact.whatsapp.aconquija.display}
         />
       </div>
+
     </div>
   )
 }
